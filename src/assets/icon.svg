@@ -1,0 +1,24 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <rect x="50" y="180" width="50" height="80" fill="url(#lowGradient)" stroke="darkred" stroke-width="2"/>
+    <rect x="125" y="120" width="50" height="140" fill="url(#mediumGradient)" stroke="gold" stroke-width="2"/>
+    <rect x="200" y="60" width="50" height="200" fill="url(#highGradient)" stroke="darkgreen" stroke-width="2"/>
+  </g>
+
+  <defs>
+    <linearGradient id="lowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4caf50; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e7d32; stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mediumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffcc00; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc9900; stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="highGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#ff4d4d; stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#b30000; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
