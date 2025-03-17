@@ -25,7 +25,7 @@ export class ResultsComponent implements OnInit{
 
   selectedFood: any = null;
   currentPage = 1;
-  pageSize = 4;
+  pageSize = 10;
   searchTerm: string = '';
   filteredData = [...this.foodData];
   displayedFoodData = [...this.foodData];

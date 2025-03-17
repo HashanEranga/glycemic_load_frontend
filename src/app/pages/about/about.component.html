@@ -1,23 +1,121 @@
-<div class="container">
+<div class="container mt-5">
     <div class="row">
-        <div class="col-lg py-4 px-4">
-            <h4 class="text-center">Introduction to the Glycemic Load Prediction App</h4>
-            <p>
-                Welcome to the Glycemic Load Prediction App, an AI-powered tool designed to help you understand the glycemic impact of your meals. By entering the nutritional composition of your food—such as carbohydrates, fiber, and other key nutrients—our intelligent algorithm predicts the glycemic load (GL), giving you valuable insights into how your diet may affect blood sugar levels.
-                Whether you're managing diabetes, following a low-GI diet, or simply optimizing your nutrition, this app provides data-driven predictions to support informed dietary choices.
-            </p>
-            <p>
-                🚀 Get started now and take control of your health with AI-powered precision!
-            </p>
-            <div class="text-center">
-                
-                <button class="btn btn-success btn-block m-2" type="button" (click)="navigateToCalculation()">
-                    Calculate Load
-                </button>
-                <button class="btn btn-outline-success btn-block m-2" type="button" (click)="navigateToResults()">
-                    Saved Results
-                </button>
-            </div>
-        </div>
+      <div class="col-md-12 text-center">
+        <h2>About Us</h2>
+        <p class="text-muted">
+          Welcome to <strong>Predict GL</strong>, a tool for understanding and managing Glycemic Load (GL) in your diet.
+        </p>
+        <p>
+          This web app was developed as part of a final-year undergraduate research project conducted by the Department of Food Science and Technology, Faculty of Agriculture, University of Peradeniya. Our mission is to empower individuals, health enthusiasts, and researchers with reliable, easy-to-use tools for making informed dietary choices.
+        </p>
+      </div>
     </div>
-</div>
+
+    <div class="text-center">
+        <button class="btn btn-success btn-block m-2" type="button" (click)="navigateToCalculation()">
+            Calculate Load
+        </button>
+        <button class="btn btn-outline-success btn-block m-2" type="button" (click)="navigateToResults()">
+            Saved Results
+        </button>
+    </div>
+  
+    <!-- Research Team -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3 class="text-center">Our Research Team</h3>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Ms. G.S.K. Bhagya</h5>
+            <p class="card-text">Undergraduate Researcher, Department of Food Science and Technology, University of Peradeniya</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Dr. G.M. Somaratne</h5>
+            <p class="card-text">Research Supervisor, Lecturer – PhD, MSc, BSc (Hons), SLMC Reg. Nutritionist</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Prof. A. Chandrasekara</h5>
+            <p class="card-text">Research Co-Supervisor, Head/Professor, Wayamba University of Sri Lanka</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Technical Team -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3 class="text-center">Technical Team</h3>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Mr. N.K.B.L.M. Bandara</h5>
+            <p class="card-text">Lecturer (on contract), Department of Computer Engineering, University of Sri Jayewardenepura</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Mr. A.L.H.E. Perera</h5>
+            <p class="card-text">Software Engineer<br>Cloud Solutions International</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Acknowledgements -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3 class="text-center">Acknowledgements</h3>
+        <ul class="list-group">
+          <li class="list-group-item">Department of Food Science and Technology, Faculty of Agriculture, University of Peradeniya</li>
+          <li class="list-group-item">Sri Lankan Food Composition Table</li>
+          <li class="list-group-item">Food-Based Dietary Guidelines for Sri Lankans</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- References -->
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3 class="text-center">Key References</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <i class="bi bi-book me-2"></i>
+            <a href="https://nutrition.health.gov.lk/english/resource/1317/" target="_blank">Ministry of Health, Nutrition & Indigenous Medicine, Sri Lanka – Nutrition Resources</a>
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-journal me-2"></i>
+            Opatha, J., Dissanayake, L., Herath, B., et al. (2025). <i>Journal of Food Composition and Analysis, 140, 107230</i>.
+            <a href="https://doi.org/10.1016/j.jfca.2025.107230" target="_blank">Read More</a>
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-book me-2"></i>
+            Reynolds, A., & Mitri, J. (2024). Dietary Advice for Individuals with Diabetes. <i>In Endotext, NCBI Bookshelf.</i>
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK279012/" target="_blank">Read More</a>
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-globe me-2"></i>
+            <a href="https://glycemicindex.com/gi-search/" target="_blank">University of Sydney – Glycemic Index Research</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
