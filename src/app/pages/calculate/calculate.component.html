@@ -20,6 +20,10 @@
               </div>
 
               <div class="mb-3">
+                <label for="portionSize" class="form-label">Enter approximate nutrition values per 100g. You can check the food's nutrients facts label</label>
+              </div>
+
+              <div class="mb-3">
                 <label for="carbohydrates" class="form-label">Carbohydrates: (g)</label>
                 <input id="carbohydrates" type="text" class="form-control" formControlName="carbohydrates" />
                 <div class="text-danger mt-1" *ngIf="glycemicForm.controls['carbohydrates'].invalid && glycemicForm.controls['carbohydrates'].touched">
