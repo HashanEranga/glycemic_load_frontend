@@ -4,6 +4,8 @@ import { CalculateComponent } from './pages/calculate/calculate.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { DietaryPracticesComponent } from './pages/dietary-practices/dietary-practices.component';
 import { HowUseComponent } from './pages/how-use/how-use.component';
+import { GlycemicLoadComponent } from './pages/glycemic-load/glycemic-load.component';
+import { GlycemicIndexComponent } from './pages/glycemic-index/glycemic-index.component';
 
 export const routes: Routes = [
     {path: 'about', component: AboutComponent},
@@ -11,5 +13,7 @@ export const routes: Routes = [
     {path: 'results', component: ResultsComponent},
     {path: 'dietary-practices', component: DietaryPracticesComponent},
     {path: 'how-to-use', component: HowUseComponent},
+    {path: 'glycemic-load', component: GlycemicLoadComponent},
+    {path: 'glycemic-index', component: GlycemicIndexComponent},
     {path: "**", component: AboutComponent, pathMatch: 'full'}
 ];

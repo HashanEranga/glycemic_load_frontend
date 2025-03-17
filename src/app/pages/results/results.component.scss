@@ -1,3 +1,13 @@
 .container {
     margin-bottom: 100px;
 }
+.pagination .page-link {
+    color: #146c43;
+    border-color: #157347 !important;
+  }
+  
+  .pagination .page-item.active .page-link {
+    color: white;
+    background-color: #157347 !important; 
+    border-color: #146c43 !important;
+  }
