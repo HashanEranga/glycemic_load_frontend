@@ -6,6 +6,7 @@ import { DietaryPracticesComponent } from './pages/dietary-practices/dietary-pra
 import { HowUseComponent } from './pages/how-use/how-use.component';
 import { GlycemicLoadComponent } from './pages/glycemic-load/glycemic-load.component';
 import { GlycemicIndexComponent } from './pages/glycemic-index/glycemic-index.component';
+import { MixMealCalculatorComponent } from './pages/mix-meal-calculator/mix-meal-calculator.component';
 
 export const routes: Routes = [
     {path: 'about', component: AboutComponent},
@@ -15,5 +16,6 @@ export const routes: Routes = [
     {path: 'how-to-use', component: HowUseComponent},
     {path: 'glycemic-load', component: GlycemicLoadComponent},
     {path: 'glycemic-index', component: GlycemicIndexComponent},
+    {path: 'mix-meal-calculator', component: MixMealCalculatorComponent},
     {path: "**", component: AboutComponent, pathMatch: 'full'}
 ];

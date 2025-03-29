@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CalculateComponentService } from './calculate.component.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-calculate',
   standalone: true,
@@ -17,7 +18,7 @@ export class CalculateComponent {
   isLoading: boolean = false; 
   foodName: string = '';
 
-  constructor(private calculateService: CalculateComponentService) {
+  constructor(private calculateService: CalculateComponentService, private route: ActivatedRoute,) {
     this.glycemicForm = new FormGroup({
       foodName: new FormControl('', [Validators.required]),
       portionSize: new FormControl('', [Validators.required, Validators.pattern(/^\d*\.?\d+$/)]),
@@ -25,6 +26,18 @@ export class CalculateComponent {
       protein: new FormControl('', [Validators.required, Validators.pattern(/^\d*\.?\d+$/)]),
       totalFat: new FormControl('', [Validators.required, Validators.pattern(/^\d*\.?\d+$/)]),
       dietaryFiber: new FormControl('', [Validators.required, Validators.pattern(/^\d*\.?\d+$/)])
+    });
+
+    this.route.queryParams.subscribe(params => {
+      if (params['portionSize']) {
+        this.glycemicForm.patchValue({
+          portionSize: params['portionSize'],
+          carbohydrates: params['carbs'],
+          protein: params['protein'],
+          totalFat: params['fats'],
+          dietaryFiber: params['fiber']
+        });
+      }
     });
   }
 

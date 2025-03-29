@@ -1,0 +1,66 @@
+<div class="container mt-4">
+  
+    <div class="input-group mb-3">
+      <input 
+        type="text" 
+        class="form-control form-control-lg" 
+        placeholder="Search food by name..." 
+        [(ngModel)]="searchTerm"
+        (input)="filterFood()"
+        (focus)="isDropdownOpen = true"
+      />
+      <button class="btn btn-success" (click)="applySearch()">
+        <i class="bi bi-search"></i> Search
+      </button>
+    </div>
+  
+    <div *ngIf="isDropdownOpen && filteredFood.length" class="dropdown-menu show shadow">
+      <button 
+        *ngFor="let food of filteredFood" 
+        class="dropdown-item" 
+        (click)="selectFood(food)">
+        {{ food.foodName }}
+      </button>
+    </div>
+  
+    <div *ngIf="selectedFoods.length" class="mt-3">
+        <h5><i class="bi bi-list-check"></i> Selected Foods</h5>
+        <div *ngFor="let food of selectedFoods; let i = index" class="alert d-flex justify-content-between align-items-center" [ngClass]="getAlertClass(food)">
+          <div>
+            <h6 class="mb-1"><i class="bi bi-bar-chart-line"></i> {{ food.foodName }} - Nutritional Information</h6>
+            <ul class="mb-0 ps-3">
+              <li><strong>Carbohydrates:</strong> {{ food.nutrients.carbs }}</li>
+              <li><strong>Protein:</strong> {{ food.nutrients.protein }}</li>
+              <li><strong>Total Fat:</strong> {{ food.nutrients.fats }}</li>
+              <li><strong>Dietary Fiber:</strong> {{ food.nutrients.fiber }}</li>
+              <li><strong>Glycemic Load:</strong> {{ food.glycemicLoad }}</li>
+              <li><strong>Portion Size:</strong> {{ food.portionSize }}</li>
+            </ul>
+          </div>
+          <button class="btn btn-danger btn-sm" (click)="removeFood(i)">
+            <i class="bi bi-x-circle"></i> Remove
+          </button>
+        </div>
+    </div>
+  
+    <div class="text-center mt-3" *ngIf="selectedFoods.length >= 2">
+        <button class="btn btn-warning btn-lg shadow" (click)="openConfirmModal(content)">Predict Mixed Meal Glycemic Load</button>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <ng-template #content let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">Confirm Navigation</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        You will be directed to the Predict Glycemic Load window for predict glycemic load for the mixed meal. Do you want to proceed?
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancel click')">Cancel</button>
+        <button type="button" class="btn btn-success" (click)="predictGlycemicLoad(); modal.close('Proceed')">Proceed</button>
+    </div>
+    </ng-template>
+
+</div>
+  
